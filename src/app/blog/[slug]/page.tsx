@@ -11,7 +11,6 @@ export async function generateStaticParams() {
 export default async function BlogPostPage({ params }: any) {
   const { slug } = await params;
   const postData = await getPostData(slug);
-  console.log(postData)
 
   return (
     <article className="max-w-2xl mx-auto p-8">

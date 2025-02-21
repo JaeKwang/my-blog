@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default function Home() {
   const allPosts = getSortedPostsData();
-  console.log(allPosts)
   return (
     <section className="max-w-3xl mx-auto p-8">
       <h1 className="text-4xl font-bold mb-8">블로그</h1>
