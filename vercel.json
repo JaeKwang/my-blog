@@ -1,9 +1,24 @@
 {
-  "version": 2,
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "http://54.180.118.112/$1"
-    }
-  ]
+  "images": {
+    "sizes": [256, 640, 1080, 2048, 3840],
+    "localPatterns": [{
+      "pathname": "^/assets/.*$",
+      "search": ""
+    }],
+    "remotePatterns": [
+      {
+        "protocol": "http",
+        "hostname": "http://54.180.118.112/",
+        "port": "",
+        "pathname": "^/images/CardImage/.*$",
+        "search": "?v=1"
+      }
+    ],
+    "minimumCacheTTL": 60,
+    "qualities": [25, 50, 75],
+    "formats": ["image/webp"],
+    "dangerouslyAllowSVG": false,
+    "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
+    "contentDispositionType": "inline"
+  }
 }
