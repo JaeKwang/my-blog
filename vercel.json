@@ -1,11 +1,9 @@
 {
-  "remotePatterns": [
+  "version": 2,
+  "rewrites": [
     {
-      "protocol": "http",
-      "hostname": "http://54.180.118.112",
-      "port": "",
-      "pathname": "^/images/CardImage/.*$",
-      "search": "?v=1"
+      "source": "/api/(.*)",
+      "destination": "http://54.180.118.112/$1"
     }
   ]
 }
