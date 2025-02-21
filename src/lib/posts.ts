@@ -10,6 +10,7 @@ export interface PostData {
   id: string;
   title: string;
   date: string;
+  thumbnail: string;
   contentHtml: string;
 }
 
@@ -28,6 +29,7 @@ export async function getPostData(id: string): Promise<PostData> {
     contentHtml,
     title: matterResult.data.title,
     date: matterResult.data.date,
+    thumbnail: matterResult.data.thumbnail || null,
   };
 }
 
@@ -43,6 +45,7 @@ export function getSortedPostsData(): Array<Omit<PostData, "contentHtml">> {
             id,
             title: matterResult.data.title,
             date: matterResult.data.date,
+            thumbnail: matterResult.data.thumbnail || null,
         }
     })
 
